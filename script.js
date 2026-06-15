@@ -215,6 +215,8 @@ WhatsApp: <a href="https://wa.me/918427168892" target="_blank" style="color:#25D
 📱 WhatsApp: <a href="https://wa.me/918427168892" target="_blank" style="color:#25D366">+91 8427168892</a><br>
 📧 Email: sandeep@conceptwarriors.in<br>
 📍 Punjab, India (Online Nationwide)`,
+  hi : `Hello Student I am Your Personal AI Chatbot Kindly let me know what is in your mind?`,
+  harsh : `This Portal is developed by Harsh Jha currently a student of computer Aplications.`,
   neet: `🏥 <strong>NEET Preparation:</strong><br>
 Complete Physics, Chemistry coverage with concept-first approach, mock tests, and previous year papers. Sandeep Sir has guided multiple NEET qualifiers personally.`,
   jee: `⚙️ <strong>JEE Preparation:</strong><br>
@@ -223,6 +225,7 @@ JEE Main & Advanced with advanced problem solving, short tricks, and intensive p
 For the best answer, please:<br>
 📲 WhatsApp: <a href="https://wa.me/918427168892" target="_blank" style="color:#25D366">8427168892</a><br>
 Or <a href="contact.html" style="color:var(--primary)">visit our contact page</a>.`
+
 };
 
 function sendBotMessage(key) {
@@ -261,6 +264,8 @@ function sendChatMessage() {
   else if (lower.includes('fee') || lower.includes('price') || lower.includes('cost') || lower.includes('charge')) key = 'fees';
   else if (lower.includes('contact') || lower.includes('number') || lower.includes('phone') || lower.includes('whatsapp')) key = 'contact';
   else if (lower.includes('neet') || lower.includes('medical')) key = 'neet';
+  else if (lower.includes('harsh') || lower.includes('jha') || lower.includes('developed by') || lower.includes('who made this portal')) key = 'harsh';
+  else if (lower.includes('hi') || lower.includes("hello")) key = 'hi';
   else if (lower.includes('jee') || lower.includes('engineering')) key = 'jee';
   setTimeout(() => { sendBotMessage(key); messages.scrollTop = messages.scrollHeight; }, 600);
 }

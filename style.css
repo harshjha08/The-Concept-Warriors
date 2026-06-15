@@ -275,7 +275,7 @@ input, select, textarea { font-family: inherit; }
 .floating-shapes { position: absolute; inset: 0; pointer-events: none; }
 .shape {
   position: absolute;
-  font-size: 1.5rem; color: var(--primary); opacity: 0.15;
+  font-size: 1.5rem; color: var(--primary); opacity: 0.50;
   animation: floatShape 10s ease-in-out infinite;
 }
 .shape-atom { top: 20%; left: 8%; animation-delay: 0s; font-size: 2rem; }
@@ -326,7 +326,7 @@ input, select, textarea { font-family: inherit; }
 .hero-visual { position: relative; display: flex; justify-content: center; }
 .hero-card-stack { position: relative; width: 400px; height: 460px; }
 .hero-main-card {
-  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%);
   width: 340px;
   background: var(--surface-glass);
   backdrop-filter: blur(20px);
@@ -381,14 +381,14 @@ input, select, textarea { font-family: inherit; }
 .floating-card i { font-size: 1.2rem; }
 .floating-card > div strong { font-size: 0.8rem; font-weight: 700; }
 .floating-card > div p { font-size: 0.7rem; color: var(--text-muted); }
-.card-neet { top: 5%; left: -10%; animation-delay: 0s; }
+.card-neet { top: 4%; left: -10%; animation-delay: 0s; }
 .card-neet i { color: var(--neet); }
 
-.card-class { bottom: 15%; right: -5%; animation-delay: -2s; }
+.card-class { bottom: 34%; right: -5%; animation-delay: -2s; }
 .card-class i { color: var(--primary); }
-.card-doubt { bottom: 5%; left: 0%; animation-delay: -4s; }
+.card-doubt { bottom: 27%; left: 0%; animation-delay: -4s; }
 .card-doubt i { color: var(--success); }
-.card-topper{ right: 5%; top: 15%; animation-delay: -6s;}
+.card-topper{ right: 2%; top: 5%; animation-delay: -6s;}
 .card-topper i { color: var(--accent);}
 @keyframes floatCard {
   0%, 100% { transform: translateY(0); }
