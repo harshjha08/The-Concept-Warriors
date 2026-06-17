@@ -39,20 +39,63 @@
 </nav>
 
 <!-- POPUPS -->
-<div id="demoPopup" class="popup-overlay">
-  <div class="popup-box">
-    <button class="popup-close" onclick="closePopup('demoPopup')"><i class="fas fa-times"></i></button>
-    <h2>Book Free <span class="gradient-text">Demo Class</span></h2>
-    <p>Fill in your details and we'll contact you within 24 hours.</p>
-    <div class="form-group"><input type="text" id="demoName" placeholder="Your Name" /></div>
-    <div class="form-group"><input type="tel" id="demoPhone" placeholder="Phone Number" /></div>
-    <div class="form-group"><input type="email" id="demoEmail" placeholder="Email Address" /></div>
-    <div class="form-group"><select id="demoClass"><option value="">Select Your Class</option><option>Class 8</option><option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option><option>Dropper/Repeater</option></select></div>
-    <div class="form-group"><select id="demoGoal"><option value="">Target Exam</option><option>NEET</option><option>JEE Main</option><option>JEE Advanced</option><option>CUET</option><option>Board Exams</option></select></div>
-    <button class="btn-primary btn-full" onclick="submitDemo()">Book Free Demo</button>
+<!-- DEMO POPUP -->
+<form action="https://formspree.io/f/xojzblrj" method="POST">
+
+  <div id="demoPopup" class="popup-overlay">
+    <div class="popup-box">
+
+      <button class="popup-close" onclick="closePopup('demoPopup')" type="button">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <h2>Book Free <span class="gradient-text">Demo Class</span></h2>
+      <p>Fill in your details and we'll contact you within 24 hours.</p>
+
+      <div class="form-group">
+        <input type="text" name="Name" placeholder="Your Name" required />
+      </div>
+
+      <div class="form-group">
+        <input type="tel" name="Phone" placeholder="Phone Number" required />
+      </div>
+
+      <div class="form-group">
+        <input type="email" name="Email" placeholder="Email Address" required />
+      </div>
+
+      <div class="form-group">
+        <select name="Class" required>
+          <option value="">Select Your Class</option>
+          <option>Class 8</option>
+          <option>Class 9</option>
+          <option>Class 10</option>
+          <option>Class 11</option>
+          <option>Class 12</option>
+          <option>Dropper/Repeater</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <select name="Goal" required>
+          <option value="">Target Exam</option>
+          <option>NEET</option>
+          <option>JEE Main</option>
+          <option>JEE Advanced</option>
+          <option>CUET</option>
+          <option>Board Exams</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-primary btn-full">
+        Book Free Demo
+      </button>
+
+    </div>
   </div>
-</div>
-<div id="enrollPopup" class="popup-overlay">
+
+</form>
+<!-- <div id="enrollPopup" class="popup-overlay">
   <div class="popup-box">
     <button class="popup-close" onclick="closePopup('enrollPopup')"><i class="fas fa-times"></i></button>
     <h2>Enroll Now – <span class="gradient-text">Start Learning</span></h2>
@@ -63,15 +106,61 @@
     <div class="form-group"><select id="enrollMode"><option value="">Preferred Mode</option><option>Online</option><option>Offline</option><option>Home Tutoring</option><option>One-to-One</option></select></div>
     <button class="btn-primary btn-full" onclick="submitEnroll()">Complete Enrollment</button>
   </div>
-</div>
-<div id="successPopup" class="popup-overlay">
-  <div class="popup-box text-center">
-    <div class="success-icon">✅</div>
-    <h2>You're <span class="gradient-text">All Set!</span></h2>
-    <p>Your request has been received. Sandeep Sir will reach out within 24 hours.</p>
-    <button class="btn-primary" onclick="closePopup('successPopup')">Done</button>
+</div> -->
+<!-- ENROLL POPUP -->
+<form action="https://formspree.io/f/mdavjrza" method="POST">
+
+  <div id="enrollPopup" class="popup-overlay">
+    <div class="popup-box">
+
+      <button  type="button" class="popup-close" onclick="closePopup('enrollPopup')" type="button">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <h2>Enroll Now – <span class="gradient-text">Start Learning</span></h2>
+
+      <div class="form-group">
+        <input type="text" name="Name" placeholder="Full Name" required />
+      </div>
+
+      <div class="form-group">
+        <input type="tel" name="Phone" placeholder="Phone Number" required />
+      </div>
+
+      <div class="form-group">
+        <input type="email" name="Email" placeholder="Email Address" required />
+      </div>
+
+      <div class="form-group">
+        <select name="Course" required>
+          <option value="">Select Course</option>
+          <option>Foundation Program (8-10)</option>
+          <option>NEET Preparation</option>
+          <option>JEE Preparation</option>
+          <option>CUET Preparation</option>
+          <option>Board Exam Prep</option>
+          <option>Personal Mentorship</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <select name="Mode" required>
+          <option value="">Preferred Mode</option>
+          <option>Online</option>
+          <option>Offline</option>
+          <option>Home Tutoring</option>
+          <option>One-to-One</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-primary btn-full">
+        Complete Enrollment
+      </button>
+
+    </div>
   </div>
-</div>
+
+</form>
 
 <!-- COURSES HERO -->
 <section class="courses-hero">

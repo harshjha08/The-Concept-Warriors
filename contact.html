@@ -107,126 +107,161 @@
         <div class="form-card">
           <h3>📞 Request a Callback</h3>
           <p>Leave your details and Sandeep Sir will call you back within a few hours.</p>
-          <form id="callbackForm" onsubmit="submitContactForm(event, 'callbackForm', 'cw-callback-requests')">
-            <div class="form-row">
-              <div class="form-group">
-                <label>Full Name *</label>
-                <input type="text" name="name" placeholder="Your name" required />
-              </div>
-              <div class="form-group">
-                <label>Phone Number *</label>
-                <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Email Address</label>
-              <input type="email" name="email" placeholder="your@email.com" />
-            </div>
-            <div class="form-group">
-              <label>Best Time to Call</label>
-              <select name="timeSlot">
-                <option value="">Select preferred time</option>
-                <option>Morning (9 AM – 12 PM)</option>
-                <option>Afternoon (12 PM – 4 PM)</option>
-                <option>Evening (4 PM – 8 PM)</option>
-              </select>
-            </div>
-            <button type="submit" class="btn-primary btn-full">Request Callback</button>
-          </form>
+          <form action="https://formspree.io/f/xrevdang" method="POST">
+
+  <div class="form-row">
+    <div class="form-group">
+      <label>Full Name *</label>
+      <input type="text" name="name" required />
+    </div>
+
+    <div class="form-group">
+      <label>Phone Number *</label>
+      <input type="tel" name="phone" required />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Email Address</label>
+    <input type="email" name="email" />
+  </div>
+
+  <div class="form-group">
+    <label>Best Time to Call</label>
+    <select name="timeSlot">
+      <option value="">Select preferred time</option>
+      <option>Morning (9 AM – 12 PM)</option>
+      <option>Afternoon (12 PM – 4 PM)</option>
+      <option>Evening (4 PM – 8 PM)</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn-primary btn-full">
+    Request Callback
+  </button>
+
+</form>
         </div>
 
         <!-- DEMO CLASS -->
         <div class="form-card" id="demoForm">
           <h3>🎯 Register for Free Demo Class</h3>
           <p>Experience Sandeep Sir's teaching before enrolling — completely free, no obligations.</p>
-          <form id="demoFormEl" onsubmit="submitContactForm(event, 'demoFormEl', 'cw-demo-requests')">
-            <div class="form-row">
-              <div class="form-group">
-                <label>Full Name *</label>
-                <input type="text" name="name" placeholder="Student's name" required />
-              </div>
-              <div class="form-group">
-                <label>Phone Number *</label>
-                <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Email Address</label>
-              <input type="email" name="email" placeholder="your@email.com" />
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label>Current Class *</label>
-                <select name="class" required>
-                  <option value="">Select class</option>
-                  <option>Class 8</option><option>Class 9</option><option>Class 10</option>
-                  <option>Class 11</option><option>Class 12</option><option>Dropper/Repeater</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Target Exam</label>
-                <select name="goal">
-                  <option value="">Select goal</option>
-                  <option>NEET</option><option>JEE Main</option><option>JEE Advanced</option>
-                  <option>CUET</option><option>Board Exams</option><option>Foundation</option>
-                </select>
-              </div>
-            </div>
-            <button type="submit" class="btn-primary btn-full">Register for Free Demo</button>
-          </form>
+          <form action="https://formspree.io/f/xojzblrj" method="POST">
+
+  <div class="form-row">
+    <div class="form-group">
+      <label>Full Name *</label>
+      <input type="text" name="name" required />
+    </div>
+
+    <div class="form-group">
+      <label>Phone Number *</label>
+      <input type="tel" name="phone" required />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Email Address</label>
+    <input type="email" name="email" />
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label>Current Class *</label>
+      <select name="class" required>
+        <option value="">Select class</option>
+        <option>Class 8</option>
+        <option>Class 9</option>
+        <option>Class 10</option>
+        <option>Class 11</option>
+        <option>Class 12</option>
+        <option>Dropper/Repeater</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Target Exam</label>
+      <select name="goal">
+        <option value="">Select goal</option>
+        <option>NEET</option>
+        <option>JEE Main</option>
+        <option>JEE Advanced</option>
+        <option>CUET</option>
+        <option>Board Exams</option>
+        <option>Foundation</option>
+      </select>
+    </div>
+  </div>
+
+  <button type="submit" class="btn-primary btn-full">
+    Register for Free Demo
+  </button>
+
+</form>
         </div>
 
         <!-- ENROLL NOW -->
         <div class="form-card">
           <h3>✅ Enroll Now</h3>
           <p>Ready to join? Fill this form and we'll process your enrollment within 24 hours.</p>
-          <form id="enrollFormEl" onsubmit="submitContactForm(event, 'enrollFormEl', 'cw-enroll-requests')">
-            <div class="form-row">
-              <div class="form-group">
-                <label>Full Name *</label>
-                <input type="text" name="name" placeholder="Student's full name" required />
-              </div>
-              <div class="form-group">
-                <label>Phone Number *</label>
-                <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Email Address *</label>
-              <input type="email" name="email" placeholder="your@email.com" required />
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label>Select Course *</label>
-                <select name="course" required>
-                  <option value="">Choose a program</option>
-                  <option>Foundation Program (8–10)</option>
-                  <option>NEET Preparation</option>
-                  <option>JEE Main & Advanced</option>
-                  <option>CUET Preparation</option>
-                  <option>Board Exam Prep (11–12)</option>
-                  <option>Crash Course</option>
-                  <option>Personal Mentorship</option>
-                  <option>Concept Building</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Preferred Mode *</label>
-                <select name="mode" required>
-                  <option value="">Choose mode</option>
-                  <option>Online Live</option>
-                  <option>Offline / In-Person</option>
-                  <option>Home Tutoring</option>
-                  <option>One-to-One</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Any specific requirements or questions?</label>
-              <textarea name="message" placeholder="Tell us anything that will help us serve you better..."></textarea>
-            </div>
-            <button type="submit" class="btn-primary btn-full">Submit Enrollment Request</button>
-          </form>
+          <form action="https://formspree.io/f/mdavjrza" method="POST">
+
+  <div class="form-row">
+    <div class="form-group">
+      <label>Full Name *</label>
+      <input type="text" name="name" required />
+    </div>
+
+    <div class="form-group">
+      <label>Phone Number *</label>
+      <input type="tel" name="phone" required />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Email Address *</label>
+    <input type="email" name="email" required />
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label>Select Course *</label>
+      <select name="course" required>
+        <option value="">Choose a program</option>
+        <option>Foundation Program (8–10)</option>
+        <option>NEET Preparation</option>
+        <option>JEE Main & Advanced</option>
+        <option>CUET Preparation</option>
+        <option>Board Exam Prep (11–12)</option>
+        <option>Crash Course</option>
+        <option>Personal Mentorship</option>
+        <option>Concept Building</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Preferred Mode *</label>
+      <select name="mode" required>
+        <option value="">Choose mode</option>
+        <option>Online Live</option>
+        <option>Offline / In-Person</option>
+        <option>Home Tutoring</option>
+        <option>One-to-One</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Any specific requirements or questions?</label>
+    <textarea name="message"></textarea>
+  </div>
+
+  <button type="submit" class="btn-primary btn-full">
+    Submit Enrollment Request
+  </button>
+
+</form>
         </div>
       </div>
     </div>

@@ -37,19 +37,62 @@
   </div>
 </nav>
 
-<div id="demoPopup" class="popup-overlay">
-  <div class="popup-box">
-    <button class="popup-close" onclick="closePopup('demoPopup')"><i class="fas fa-times"></i></button>
-    <h2>Book Free <span class="gradient-text">Demo Class</span></h2>
-    <p>Fill in your details and we'll contact you within 24 hours.</p>
-    <div class="form-group"><input type="text" id="demoName" placeholder="Your Name" /></div>
-    <div class="form-group"><input type="tel" id="demoPhone" placeholder="Phone Number" /></div>
-    <div class="form-group"><input type="email" id="demoEmail" placeholder="Email Address" /></div>
-    <div class="form-group"><select id="demoClass"><option value="">Select Your Class</option><option>Class 8</option><option>Class 9</option><option>Class 10</option><option>Class 11</option><option>Class 12</option><option>Dropper/Repeater</option></select></div>
-    <div class="form-group"><select id="demoGoal"><option value="">Target Exam</option><option>NEET</option><option>JEE Main</option><option>JEE Advanced</option><option>CUET</option><option>Board Exams</option></select></div>
-    <button class="btn-primary btn-full" onclick="submitDemo()">Book Free Demo</button>
+<!-- DEMO POPUP -->
+<form action="https://formspree.io/f/xojzblrj" method="POST">
+
+  <div id="demoPopup" class="popup-overlay">
+    <div class="popup-box">
+
+      <button class="popup-close" onclick="closePopup('demoPopup')" type="button">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <h2>Book Free <span class="gradient-text">Demo Class</span></h2>
+      <p>Fill in your details and we'll contact you within 24 hours.</p>
+
+      <div class="form-group">
+        <input type="text" name="Name" placeholder="Your Name" required />
+      </div>
+
+      <div class="form-group">
+        <input type="tel" name="Phone" placeholder="Phone Number" required />
+      </div>
+
+      <div class="form-group">
+        <input type="email" name="Email" placeholder="Email Address" required />
+      </div>
+
+      <div class="form-group">
+        <select name="Class" required>
+          <option value="">Select Your Class</option>
+          <option>Class 8</option>
+          <option>Class 9</option>
+          <option>Class 10</option>
+          <option>Class 11</option>
+          <option>Class 12</option>
+          <option>Dropper/Repeater</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <select name="Goal" required>
+          <option value="">Target Exam</option>
+          <option>NEET</option>
+          <option>JEE Main</option>
+          <option>JEE Advanced</option>
+          <option>CUET</option>
+          <option>Board Exams</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-primary btn-full">
+        Book Free Demo
+      </button>
+
+    </div>
   </div>
-</div>
+
+</form>
 <div id="successPopup" class="popup-overlay">
   <div class="popup-box text-center">
     <div class="success-icon">✅</div>
@@ -66,7 +109,7 @@
     <h1 class="section-title" data-aos="fade-up" data-aos-delay="100">We Don't Just Teach. <span class="gradient-text">We Mentor.</span></h1>
     <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">Guidance beyond textbooks — helping students understand not just what to study, but how to study, why they're studying, and where they're heading.</p>
     <div style="margin-top:32px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;" data-aos="fade-up" data-aos-delay="300">
-      <button class="btn-primary btn-lg" onclick="openDemoPopup()"><i class="fas fa-user-tie"></i> Book a Mentorship Session</button>
+      <button class="btn-primary btn-lg" onclick="openPopup('mentorshipPopup')"><i class="fas fa-user-tie"></i> Book a Mentorship Session</button>
       <a href="contact.html" class="btn-outline btn-lg"><i class="fas fa-phone"></i> Talk to Sandeep Sir</a>
     </div>
   </div>
@@ -208,7 +251,7 @@
       <h2>Start Your Mentorship <span class="gradient-text-light">Journey Today</span></h2>
       <p>A 30-minute free consultation is all it takes. Book yours now and take the first step toward your best academic year yet.</p>
       <div class="cta-buttons">
-        <button class="btn-white" onclick="openDemoPopup()"><i class="fas fa-user-tie"></i> Book Free Consultation</button>
+        <button class="btn-white" onclick="openPopup('consultationPopup')"><i class="fas fa-user-tie"></i> Book Free Consultation</button>
         <a href="https://wa.me/918427168892?text=Hello%20Sir%2C%20I%20am%20interested%20in%20mentorship." target="_blank" class="btn-whatsapp-cta"><i class="fab fa-whatsapp"></i> WhatsApp Sir</a>
       </div>
     </div>
@@ -240,6 +283,154 @@
 
 <a href="https://wa.me/918427168892?text=Hello%20Sir%2C%20I%20would%20like%20to%20know%20more%20about%20The%20Concept%20Warriors." target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i><span class="wa-tooltip">Chat with Sir</span></a>
 <button class="back-to-top" id="backToTop" onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></button>
+
+
+
+<div id="mentorshipPopup" class="popup-overlay">
+  <div class="popup-box">
+
+    <button class="popup-close" onclick="closePopup('mentorshipPopup')" type="button">
+      ✕
+    </button>
+
+    <h2>Mentorship Request</h2>
+
+    <!-- yaha tum apna form paste karo -->
+     <form action="https://formspree.io/f/mrevdwyv" method="POST">
+
+  <div class="form-row">
+    <div class="form-group">
+      <label>Full Name *</label>
+      <input type="text" name="name" placeholder="Your full name" required />
+    </div>
+
+    <div class="form-group">
+      <label>Phone Number *</label>
+      <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Email Address *</label>
+    <input type="email" name="email" placeholder="your@email.com" required />
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label>Current Class *</label>
+      <select name="class" required>
+        <option value="">Select your class</option>
+        <option>Class 8</option>
+        <option>Class 9</option>
+        <option>Class 10</option>
+        <option>Class 11</option>
+        <option>Class 12</option>
+        <option>Dropper/Repeater</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Target Exam *</label>
+      <select name="goal" required>
+        <option value="">Select exam</option>
+        <option>NEET</option>
+        <option>JEE Main</option>
+        <option>JEE Advanced</option>
+        <option>CUET</option>
+        <option>Board Exams</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Preferred Mentorship Type *</label>
+    <select name="mentorship_type" required>
+      <option value="">Choose type</option>
+      <option>1-on-1 Personal Mentorship</option>
+      <option>Weekly Guidance</option>
+      <option>Daily Study Plan</option>
+      <option>Doubt Solving Support</option>
+      <option>Full Academic Guidance</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Your Main Challenge</label>
+    <textarea name="message" placeholder="Tell us where you need help..."></textarea>
+  </div>
+
+  <button type="submit" class="btn-primary btn-full">
+    Request Mentorship
+  </button>
+
+</form>
+    
+  </div>
+</div>
+
+<!-- FREE CONSULTATION POPUP -->
+<div id="consultationPopup" class="popup-overlay">
+
+  <div class="popup-box">
+
+    <button class="popup-close" onclick="closePopup('consultationPopup')" type="button">
+      ✕
+    </button>
+
+    <h2>Free <span class="gradient-text">Consultation</span></h2>
+    <p>Get expert guidance for your academic journey</p>
+
+    <form action="https://formspree.io/f/xnjyrkoe" method="POST">
+
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Full Name *" required />
+      </div>
+
+      <div class="form-group">
+        <input type="tel" name="phone" placeholder="Phone Number *" required />
+      </div>
+
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Email Address" />
+      </div>
+
+      <div class="form-group">
+        <select name="class" required>
+          <option value="">Current Class *</option>
+          <option>Class 8</option>
+          <option>Class 9</option>
+          <option>Class 10</option>
+          <option>Class 11</option>
+          <option>Class 12</option>
+          <option>Dropper/Repeater</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <select name="goal" required>
+          <option value="">Target Goal *</option>
+          <option>NEET</option>
+          <option>JEE Main</option>
+          <option>JEE Advanced</option>
+          <option>CUET</option>
+          <option>Board Exams</option>
+          <option>Career Guidance</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <textarea name="message" placeholder="Tell us your doubts or goals..."></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary btn-full">
+        Get Free Consultation
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script src="script.js"></script>
