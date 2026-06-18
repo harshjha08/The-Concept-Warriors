@@ -7,7 +7,9 @@ body { overflow-x: hidden; }
   width: 40px; height: 40px; border-radius: 8px;
   background: var(--primary); color: #fff; font-size: 1rem;
   align-items: center; justify-content: center;
+  transition: transform 0.3s;
 }
+
 @media (max-width: 900px) {
   .lms-sidebar { transform: translateX(-100%); transition: transform 0.3s; width: 260px; }
   .lms-sidebar.open { transform: translateX(0); }
@@ -16,10 +18,16 @@ body { overflow-x: hidden; }
   .lms-stats { grid-template-columns: 1fr 1fr; }
   .lms-cards-row { grid-template-columns: 1fr; }
   .notes-grid { grid-template-columns: 1fr 1fr; }
+
+  .mobile-menu-toggle.open{
+    transform: translateX(250px);
+  }
+  
 }
 @media (max-width: 480px) {
   .lms-stats { grid-template-columns: 1fr; }
-  .notes-grid { grid-template-columns: 1fr; }
+  .notes-grid { grid-template-columns: 1fr;
+   }
 }
 .nav-section-label {
   font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em;
