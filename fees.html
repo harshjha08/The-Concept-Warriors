@@ -771,11 +771,12 @@
     <button class="popup-close" onclick="closePopup('enquiryPopup')"><i class="fas fa-times"></i></button>
     <h2>Get a <span class="gradient-text">Custom Quote</span></h2>
     <p>Tell us your requirements and Sandeep Sir will send you a personalised fee structure within 24 hours.</p>
-    <div class="form-group"><input type="text" id="eq-name" placeholder="Your Full Name *" /></div>
-    <div class="form-group"><input type="tel" id="eq-phone" placeholder="Phone / WhatsApp *" /></div>
-    <div class="form-group"><input type="email" id="eq-email" placeholder="Email Address" /></div>
+    <form action="https://formspree.io/f/xqevlarv" method="post">
+    <div class="form-group"><input type="text" name="name" id="eq-name" placeholder="Your Full Name *" /></div>
+    <div class="form-group"><input type="tel" name="mobile" id="eq-phone" placeholder="Phone / WhatsApp *" /></div>
+    <div class="form-group"><input type="email" name="email" id="eq-email" placeholder="Email Address" /></div>
     <div class="form-group">
-      <select id="eq-course">
+      <select name="course" id="eq-course">
         <option value="">I'm interested in…</option>
         <option>NEET Preparation</option>
         <option>JEE Main & Advanced</option>
@@ -789,7 +790,7 @@
       </select>
     </div>
     <div class="form-group">
-      <select id="eq-mode">
+      <select name="mode" id="eq-mode">
         <option value="">Preferred Mode</option>
         <option>Online Live</option>
         <option>Offline / In-Person</option>
@@ -797,8 +798,9 @@
         <option>One-to-One (Any Mode)</option>
       </select>
     </div>
-    <button class="btn-primary btn-full" onclick="submitEnquiry()"><i class="fas fa-paper-plane"></i> Send Enquiry</button>
+    <button type="submit" class="btn-primary btn-full" onclick="submitEnquiry()"><i class="fas fa-paper-plane"></i> Send Enquiry</button>
   </div>
+   </form>
 </div>
 
 <div id="successPopup" class="popup-overlay">
@@ -812,6 +814,41 @@
   </div>
 </div>
 
+<!--Demo popup-->
+<form action="https://formspree.io/f/xgojzvja" method="post">
+<div id="demoPopup" class="popup-overlay">
+  <div class="popup-box">
+    <button type="button" class="popup-close"  onclick="closePopup('demoPopup')"><i class="fas fa-times"></i></button>
+    <h2>Book Free <span class="gradient-text">Demo Class</span></h2>
+    <p>Fill in your details and we'll contact you within 24 hours.</p>
+    <div class="form-group">
+      <input type="text" name="Name" id="demoName" placeholder="Your Name" />
+    </div>
+    <div class="form-group">
+      <input type="tel" name="Phone" id="demoPhone" placeholder="Phone Number" />
+    </div>
+    <div class="form-group">
+      <input type="email" name="Email" id="demoEmail" placeholder="Email Address" />
+    </div>
+    <div class="form-group">
+      <select name="Class" id="demoClass">
+        <option value="">Select Your Class</option>
+        <option>Class 8</option><option>Class 9</option><option>Class 10</option>
+        <option>Class 11</option><option>Class 12</option><option>Dropper/Repeater</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <select name="Goal" id="demoGoal">
+        <option value="">Target Exam</option>
+        <option>NEET</option><option>JEE Main</option><option>JEE Advanced</option>
+        <option>CUET</option><option>Board Exams</option>
+      </select>
+    </div>
+    <!-- onclick="submitDemo()" -->
+    <button type="submit" class="btn-primary btn-full" >Book Free Demo</button>
+  </div>
+</div>
+</form>
 <!-- ═══════════════════════════════════════════════════════════
      NAVBAR
 ════════════════════════════════════════════════════════════ -->
@@ -1095,7 +1132,7 @@
         <div class="mode-icon-wrap"><i class="fas fa-user-friends"></i></div>
         <h3>One-to-One</h3>
         <p class="mode-desc">Fully dedicated sessions — 100% of every minute is exclusively for you. The fastest path to improvement.</p>
-        <div class="mode-price-val">₹8,500 <span> /month</span></div>
+        <div class="mode-price-val">₹8,500 <span>/ month</span></div>
         <div class="mode-price-note">↑ Maximum impact · Any location</div>
         <div style="margin-top:14px;display:flex;flex-direction:column;gap:6px;text-align:left;">
           <div style="font-size:0.78rem;color:var(--text-muted);display:flex;gap:8px;"><i class="fas fa-check" style="color:var(--success);margin-top:2px;"></i>Zero shared attention</div>
@@ -1547,7 +1584,7 @@
       <div class="footer-contact">
         <h4>Get In Touch</h4>
         <div class="contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/918427168892" target="_blank">+91 8427168892</a></div>
-        <div class="contact-item"><i class="fas fa-envelope"></i><a href="mailto:sandeep@conceptwarriors.in">sandeep@conceptwarriors.in</a></div>
+        <div class="contact-item"><i class="fas fa-envelope"></i><a href="mailto:theconceptwarrior@gmail.com">theconceptwarrior@gmail.com</a></div>
         <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Punjab, India (Online Nationwide)</span></div>
         <div class="contact-item"><i class="fas fa-clock"></i><span>Available 9 AM – 9 PM daily</span></div>
         <button class="btn-primary btn-sm" style="margin-top:14px;" onclick="openPopup('enquiryPopup')">Get Fee Quote</button>

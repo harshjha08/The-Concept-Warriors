@@ -29,6 +29,41 @@
 </head>
 
 <body>
+  <!--Demo popup-->
+<form action="https://formspree.io/f/xgojzvja" method="post">
+<div id="demoPopup" class="popup-overlay">
+  <div class="popup-box">
+    <button type="button" class="popup-close"  onclick="closePopup('demoPopup')"><i class="fas fa-times"></i></button>
+    <h2>Book Free <span class="gradient-text">Demo Class</span></h2>
+    <p>Fill in your details and we'll contact you within 24 hours.</p>
+    <div class="form-group">
+      <input type="text" name="Name" id="demoName" placeholder="Your Name" />
+    </div>
+    <div class="form-group">
+      <input type="tel" name="Phone" id="demoPhone" placeholder="Phone Number" />
+    </div>
+    <div class="form-group">
+      <input type="email" name="Email" id="demoEmail" placeholder="Email Address" />
+    </div>
+    <div class="form-group">
+      <select name="Class" id="demoClass">
+        <option value="">Select Your Class</option>
+        <option>Class 8</option><option>Class 9</option><option>Class 10</option>
+        <option>Class 11</option><option>Class 12</option><option>Dropper/Repeater</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <select name="Goal" id="demoGoal">
+        <option value="">Target Exam</option>
+        <option>NEET</option><option>JEE Main</option><option>JEE Advanced</option>
+        <option>CUET</option><option>Board Exams</option>
+      </select>
+    </div>
+    <!-- onclick="submitDemo()" -->
+    <button type="submit" class="btn-primary btn-full" >Book Free Demo</button>
+  </div>
+</div>
+</form>
 
 <section class="feedback-hero">
 
@@ -64,7 +99,7 @@
     <div class="feedback-card">
 
       <form
-        action="https://formspree.io/f/mqeovzqo"
+        action="https://formspree.io/f/xnjkznkl"
         method="POST">
 
         <h2>Feedback Form</h2>
@@ -304,7 +339,7 @@
           </div>
           <div class="contact-item">
             <i class="fas fa-envelope"></i>
-            <a href="mailto:sandeep@conceptwarriors.in">sandeep@conceptwarriors.in</a>
+            <a href="mailto:theconceptwarrior@gmail.com">theconceptwarrior@gmail.com</a>
           </div>
           <div class="contact-item">
             <i class="fas fa-map-marker-alt"></i>
@@ -325,5 +360,6 @@
     </div>
   </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
