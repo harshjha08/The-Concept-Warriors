@@ -530,7 +530,7 @@
       <h2>Not Sure Which <span class="gradient-text-light">Course is Right?</span></h2>
       <p>Book a free consultation. Sandeep Sir will personally help you choose the best program for your goals and current level.</p>
       <div class="cta-buttons">
-        <button class="btn-white" onclick="openDemoPopup()"><i class="fas fa-phone"></i> Free Consultation</button>
+        <button class="btn-white" onclick="openPopup('consultationPopup')"><i class="fas fa-phone"></i> Free Consultation</button>
         <a href="https://wa.me/918427168892?text=Hello%20Sir%2C%20I%20need%20help%20choosing%20the%20right%20course." target="_blank" class="btn-whatsapp-cta"><i class="fab fa-whatsapp"></i> Ask on WhatsApp</a>
       </div>
     </div>
@@ -573,6 +573,70 @@
     </div>
   </div>
 </footer>
+
+<!-- FREE CONSULTATION POPUP -->
+<div id="consultationPopup" class="popup-overlay">
+
+  <div class="popup-box">
+
+    <button class="popup-close" onclick="closePopup('consultationPopup')" type="button">
+      ✕
+    </button>
+
+    <h2>Free <span class="gradient-text">Consultation</span></h2>
+    <p>Get expert guidance for your academic journey</p>
+
+    <form action="https://formspree.io/f/xbdvkdjp" method="POST">
+
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Full Name *" required />
+      </div>
+
+      <div class="form-group">
+        <input type="tel" name="phone" placeholder="Phone Number *" required />
+      </div>
+
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Email Address" />
+      </div>
+
+      <div class="form-group">
+        <select name="class" required>
+          <option value="">Current Class *</option>
+          <option>Class 8</option>
+          <option>Class 9</option>
+          <option>Class 10</option>
+          <option>Class 11</option>
+          <option>Class 12</option>
+          <option>Dropper/Repeater</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <select name="goal" required>
+          <option value="">Target Goal *</option>
+          <option>NEET</option>
+          <option>JEE Main</option>
+          <option>JEE Advanced</option>
+          <option>CUET</option>
+          <option>Board Exams</option>
+          <option>Career Guidance</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <textarea name="message" placeholder="Tell us your doubts or goals..."></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary btn-full">
+        Get Free Consultation
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
 
 <!-- <a href="https://wa.me/918427168892?text=Hello%20Sir%2C%20I%20would%20like%20to%20know%20more%20about%20The%20Concept%20Warriors." target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i><span class="wa-tooltip">Chat with Sir</span></a>
 <button class="back-to-top" id="backToTop" onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></button> -->

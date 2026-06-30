@@ -1,7 +1,6 @@
 /* ============================================================
    THE CONCEPT WARRIORS — MAIN SCRIPT
    ============================================================ */
-
 // ── THEME MANAGEMENT ─────────────────────────────────────────
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
@@ -208,13 +207,15 @@ Visit our <a href="courses.html" style="color:var(--primary)">Courses page</a> f
 It's super easy — just click the button below and fill in your details. Sandeep Sir will call you within 24 hours.<br><br>
 No commitment, completely free! 🙌`,
   fees: `💰 <strong>Fee Structure:</strong><br>
-Fees depend on your program, mode (online/offline), and number of subjects. We believe in transparent, value-first pricing.<br><br>
+Fees depend on your program, mode (online/offline), and number of subjects. We believe in transparent, value-first pricing.
+Basic Package is 7000 Per Month with 20 live session<br><br>
 📲 <strong>Contact us for a personalized quote:</strong><br>
 WhatsApp: <a href="https://wa.me/918427168892" target="_blank" style="color:#25D366">8427168892</a>`,
   contact: `📞 <strong>Contact Sandeep Sir:</strong><br>
 📱 WhatsApp: <a href="https://wa.me/918427168892" target="_blank" style="color:#25D366">+91 8427168892</a><br>
 📧 Email: sandeep@conceptwarriors.in<br>
 📍 Punjab, India (Online Nationwide)`,
+  sandeepKumar : `Sandeep Kumar Founder of The Concept Warrior and Well Qualified Tutor who does not only teach the students even he plays a vital role to build their future. He has done M.Sc Chemistry and currently working in a well known Pharma Company`,
   hi : `Hello Student I am Your Personal AI Chatbot Kindly let me know what is in your mind?`,
   harsh : `This Portal is developed by Harsh Jha currently a student of computer Aplications.`,
   neet: `🏥 <strong>NEET Preparation:</strong><br>
@@ -264,6 +265,7 @@ function sendChatMessage() {
   else if (lower.includes('fee') || lower.includes('price') || lower.includes('cost') || lower.includes('charge')) key = 'fees';
   else if (lower.includes('contact') || lower.includes('number') || lower.includes('phone') || lower.includes('whatsapp')) key = 'contact';
   else if (lower.includes('neet') || lower.includes('medical')) key = 'neet';
+  else if (lower.includes('sandeep') || lower.includes('tutor') || lower.includes('teacher') || lower.includes('sandeep Kumar') || lower.includes('founder') || lower.includes('owner')) key = 'sandeepKumar';
   else if (lower.includes('harsh') || lower.includes('jha') || lower.includes('developed by') || lower.includes('who made this portal')) key = 'harsh';
   else if (lower.includes('hi') || lower.includes("hello")) key = 'hi';
   else if (lower.includes('jee') || lower.includes('engineering')) key = 'jee';
